@@ -18,7 +18,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to='/appointments'
+                to='/locations'
                 className='nav-links'>
                 Lokacije
               </Link>

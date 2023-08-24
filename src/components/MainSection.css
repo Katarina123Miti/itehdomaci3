@@ -13,7 +13,8 @@
 
   .main-container > h1 {
     color: #fff;
-    font-size: 100px;
+    font-size: 70px;
+    font-family: cursive;
     margin-top: -100px;
   }
 
@@ -21,8 +22,7 @@
     margin-top: 8px;
     color: #fff;
     font-size: 32px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    font-family: cursive;
   }
   .main-text {
     height: 50vh;
@@ -66,5 +66,13 @@
   }
 
   .main-clients {
-    height: 100vh;
+    height: 95vh;
+  }
+
+  .main-btns {
+    margin-top: 32px;
+  }
+
+  .main-btns .btn {
+    margin: 6px;
   }
