@@ -30,3 +30,4 @@ function Cards({data1,data2,type}) {
   );
 }
 export default Cards;
+
