@@ -37,7 +37,7 @@ function Footer() {
         <p className='footer-subscription-text'>
           Možete se odjaviti kad god budete želeli.
         </p>
-        <div className='input-areas'>
+        <div className='input'>
           <form>
             <input
               className='footer-input'
@@ -70,6 +70,7 @@ function Footer() {
           </form>
         </div>
       </section>
+      <div class='website-rights'>SD 2023</div>
     </div>
   );
 }
