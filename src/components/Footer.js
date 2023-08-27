@@ -1,33 +1,38 @@
 import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function Footer() {
-    const [buttonClick, setButtonClick] = useState('');
+    const [emailInput, setEmailInput] = useState('');
+    const [commentInput, setCommentInput] = useState('');
 
-  const onClick = () => {
-    if(buttonClick != '') {
-      setButtonClick('');
+  const onClickEmail = () => {
+    if(emailInput !== '') {
+      setEmailInput('');
       setTimeout(() => {
         alert('Hvala na prijavi na naš newsletter!');
       }, 10);
     }
   }
 
-  const onClick2 = () => {
-    if(buttonClick != '') {
-      setButtonClick('');
+  const onClickComment = () => {
+    if(commentInput !== '') {
+      setCommentInput('');
       setTimeout(() => {
         alert('Hvala Vam! Potrudićemo se da usvojimo predloge i pohvale!');
       }, 10);
     }
   }
 
-  const onChange = (e) => {
-    setButtonClick(e.target.value);
+  const onChangeEmail = (e) => {
+    setEmailInput(e.target.value);
   }
+
+  const onChangeComment = (e) => {
+    setCommentInput(e.target.value);
+  }
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -44,10 +49,10 @@ function Footer() {
               name='email'
               type='email'
               placeholder='Email'
-              value={buttonClick}
-              onChange={onChange}
+              value={emailInput}
+              onChange={onChangeEmail}
             />
-             <Button buttonStyle='btn--outline' onClick={onClick} >Prijavi se</Button>
+             <Button buttonStyle='btn--outline' onClick={onClickEmail} >Prijavi se</Button>
           </form>
         </div>
       </section>
@@ -62,15 +67,15 @@ function Footer() {
               name='comment'
               type='comment'
               placeholder='Komentar'
-              value={buttonClick}
-              onChange={onChange}
+              value={commentInput}
+              onChange={onChangeComment}
             />
             <br></br>
-              <Button buttonStyle='btn--outline' onClick={onClick2}>Pošalji komentar</Button>
+              <Button buttonStyle='btn--outline' onClick={onClickComment}>Pošalji komentar</Button>
           </form>
         </div>
       </section>
-      <div class='website-rights'>SD 2023</div>
+      <div className='website-rights'>SD 2023</div>
     </div>
   );
 }
